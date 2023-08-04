@@ -204,8 +204,8 @@ int main(int argc, char **argv)
         string RAND_MAX_V2_string = argv[5];
         int RAND_MAX_V1 = stoi(RAND_MAX_V1_string);
         int RAND_MAX_V2 = stoi(RAND_MAX_V2_string);
-	    int insert_count = 0;
-	    vector<int> insert_first; vector<int> insert_second;
+	int insert_count = 0;
+	vector<int> insert_first; vector<int> insert_second;
         string num_string = argv[3];
         int num = stoi(num_string);
         while (insert_count < num){
@@ -219,10 +219,10 @@ int main(int argc, char **argv)
                 insert_count += 1;
             }
         };
-		bool flag = false;
+	bool flag = false;
         vector <vector<int>> insert_vector;
         insert_vector.push_back(insert_first);
-		insert_vector.push_back(insert_second);
+	insert_vector.push_back(insert_second);
         for (int i=0; i<insert_count; i++){
             vector<vid_t>& tmp_neigh_ = g.neighbor_v1[insert_vector[0][i]];
             int ss = tmp_neigh_.size();

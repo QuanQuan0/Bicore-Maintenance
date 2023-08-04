@@ -197,11 +197,11 @@ int main(int argc, char **argv)
     else if (exec_type == "-BiCore-Number-Batch") {
         int number_i = 0;
         int number_r = 0;
-		BiGraph g(argv[2]);
-		coreIndexKCore(g);
-		batch_set I, R;
-		string RAND_MAX_V1_string = argv[5];
-        string RAND_MAX_V2_string = argv[4];
+	BiGraph g(argv[2]);
+	coreIndexKCore(g);
+	batch_set I, R;
+	string RAND_MAX_V1_string = argv[4];
+        string RAND_MAX_V2_string = argv[5];
         int RAND_MAX_V1 = stoi(RAND_MAX_V1_string);
         int RAND_MAX_V2 = stoi(RAND_MAX_V2_string);
 	    int insert_count = 0;
@@ -231,7 +231,7 @@ int main(int argc, char **argv)
                     //R.insert(make_pair(insert_vector[0][i], insert_vector[1][i]));
                     string txt_name = "batch-rem.txt";
                     ofstream output_stream;  //(txt_name)
-                    output_stream.open(txt_name);
+                    output_stream.open(txt_name, std::ios_base::app);
                     output_stream << insert_vector[0][i] << " " << insert_vector[1][i]<< endl;
                     output_stream.close();
                     number_r++;
@@ -246,7 +246,7 @@ int main(int argc, char **argv)
             //I.insert(make_pair(insert_vector[0][i], insert_vector[1][i]));
             string txt_name = "../insertion-maintenance/batch-ins.txt";
             ofstream output_stream;  //(txt_name)
-            output_stream.open(txt_name);
+            output_stream.open(txt_name, std::ios_base::app);
             output_stream << insert_vector[0][i] << " " << insert_vector[1][i]<< endl;
             output_stream.close();
             number_i++;

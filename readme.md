@@ -257,3 +257,17 @@ The updated bi-core number of all vertices are stored in "bi-core-number-rem.txt
 | $u_1$: (1, 3), (2, 2)        | $v_1$:(1, 3), (2, 2), (3,1) |
 | $u_2$: (1, 3), (2, 2), (3,1) | $v_2$: (3,1)                |
 | $u_3$: (1, 3)                | $v_3$: (2, 2), (3,1)        |
+
+## Citation
+If you use the code, please cite our paper:
+
+    @article{luo2023efficient,
+      title={Efficient Core Maintenance in Large Bipartite Graphs},
+      author={Luo, Wensheng and Yang, Qiaoyuan and Fang, Yixiang and Zhou, Xu},
+      journal={Proceedings of the ACM on Management of Data},
+      volume={1},
+      number={3},
+      pages={1--26},
+      year={2023},
+      publisher={ACM New York, NY, USA}
+    }

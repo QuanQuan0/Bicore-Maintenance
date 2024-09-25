@@ -11,6 +11,5 @@ OBJ = bigraph.o gephi.o main.o paper.o preprocessing.o random.o utility.o dyn_re
 bicore: $(OBJ)
 	$(CC) -std=c++1y -pthread $(LDFLAGS) -O3 -o $@ $^ $(CPPFLAGS)$(BOOST_ROOT)
 
-
 clean:
 	rm -f bicore

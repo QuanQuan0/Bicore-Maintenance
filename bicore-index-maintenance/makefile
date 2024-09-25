@@ -10,3 +10,6 @@ OBJ = bigraph.o dynamic.o experiment.o gephi.o incremental_test.o main.o mischie
 
 abcore: $(OBJ)
 	$(CC) -std=c++1y -pthread $(LDFLAGS) -O3 -o $@ $^ $(CPPFLAGS)$(BOOST_ROOT)
+
+clean:
+	rm -f abcore

@@ -76,8 +76,10 @@ graph.e:
 Both the `insertion-maintenance` and `deletion-maintenance` folders contain a `Makefile`. To compile the corresponding code:
 
     1) cd insertion-maintenance/ or cd deletion-maintenance/
+       make clean
        make
     2) cd bicore-index-maintenance
+       make clean
        make
 
 After compilation, executable files named `bicore` and `abcore` will be generated.

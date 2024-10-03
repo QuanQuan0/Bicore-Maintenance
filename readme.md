@@ -73,7 +73,29 @@ graph.e:
 ## How to Run the Codes
 
 ### A. Code Compilation
-Both the `insertion-maintenance` and `deletion-maintenance` folders contain a `Makefile`. To compile the corresponding code:
+#### 1. Prerequisites
+
+1.1 C++ Compiler
+
+1.2 Boost Library
+
+  1) Installing Boost on Ubuntu:
+  sudo apt-get install libboost-all-dev
+  
+  3) Installing Boost on MacOS using Homebrew
+  brew install boost
+
+1.3 Compiling with Makefile
+
+Both the `insertion-maintenance` and `deletion-maintenance` folders contain a `Makefile`. Make sure to correctly configure the Boost include and library paths in the Makefile to ensure successful compilation.
+
+Key sections of the Makefile：
+`CC=g++`: Specifies the C++ compiler to be used, which in this case is g++.
+`BOOST_ROOT=`
+
+
+
+To compile the corresponding code:
 
     1) cd insertion-maintenance/ or cd deletion-maintenance/
        make clean

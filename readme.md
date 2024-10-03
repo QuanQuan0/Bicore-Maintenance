@@ -359,7 +359,7 @@ This process is random, so we don't list the result here.
 The result is: $u_1$, $u_2$, $u_3$, $v_1$, $v_2$, $v_3$.
     
 
-6.2 Suppose we want to query the community which is a (1,1)-core and contains vertex $u_1$, we can run one of the two commands:
+6.2 Suppose we want to query the community which is a (1, 1)-core and contains vertex $u_1$, we can run one of the two commands:
 
     sh QSBI.sh ../data/toy-graph/ 1 1 1 1
 

@@ -83,7 +83,7 @@ graph.e:
 
     sudo apt-get install libboost-all-dev
   
-  3) Installing Boost on MacOS using Homebrew:
+  2) Installing Boost on MacOS using Homebrew:
      
     brew install boost
 

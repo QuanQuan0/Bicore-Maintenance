@@ -79,11 +79,11 @@ graph.e:
 
 1.2 Boost Library
 
-  1) Installing Boost on Ubuntu:
+1.2.1 Installing Boost on Ubuntu:
 
     sudo apt-get install libboost-all-dev
   
-  2) Installing Boost on MacOS using Homebrew:
+1.2.2 Installing Boost on MacOS using Homebrew:
      
     brew install boost
 

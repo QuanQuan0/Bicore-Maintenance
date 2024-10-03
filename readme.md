@@ -80,16 +80,18 @@ graph.e:
 1.2 Boost Library
 
   1) Installing Boost on Ubuntu:
-  sudo apt-get install libboost-all-dev
+
+    sudo apt-get install libboost-all-dev
   
   3) Installing Boost on MacOS using Homebrew:
-  brew install boost
+     
+    brew install boost
 
 1.3 Configure the Makefile
 
 Both the `insertion-maintenance` and `deletion-maintenance` folders contain a `Makefile`. Make sure to correctly configure the Boost include and library paths in the Makefile to ensure successful compilation.
 
-`BOOST_ROOT=PATH_TO_BOOST_ROOT`:This variable defines the root path of your Boost installation. Ensure the BOOST_ROOT variable points to the correct Boost installation directory. For example, on macOS with Homebrew: `BOOST_ROOT=/opt/homebrew/opt/boost`; on Linux, it might look like:`BOOST_ROOT=/usr/local/boost`.
+`BOOST_ROOT=PATH_TO_BOOST_ROOT`: This variable defines the root path of the Boost installation. Ensure the BOOST_ROOT variable points to the correct Boost installation directory. For example, on macOS with Homebrew: `BOOST_ROOT=/opt/homebrew/opt/boost`; on Linux, it might look like: `BOOST_ROOT=/usr/local/boost`.
 
 1.4 Use corresponding code to compile:
 
@@ -249,6 +251,7 @@ The commands for different algorithms are stored in the folder "command". So, ru
   
 
 ### 2. Preparation
+
 2.1 To build the BiCore-Index, we can run:
 
     sh BBI.sh ../data/toy-graph/
@@ -264,6 +267,7 @@ Then, we can get the original bi-core numbers of all vertices.
   
 
 ### 3. Edge Insertion
+
 3.1 Suppose we want to insert edge ($u_1$, $v_2$), we can run one of the three commands:
 
     sh RCI.sh ../data/toy-graph/ 1 2
@@ -329,9 +333,9 @@ The updated bi-core numbers are listed as follows:
 
 | U                     | V                    |
 | :--------------------- | :--------------- |
-| $u_1$: (3, 3) | $v_1$: (3, 3)  |
-| $u_2$: (3, 3) | $v_2$: (3, 3)  |
-| $u_3$: (3, 3) | $v_3$: (3, 3)  |
+| $u_1$: (1, 2) | $v_1$: (1, 1)  |
+| $u_2$: (1, 2), (2, 1) | $v_2$: (1, 2), (2, 1)  |
+| $u_3$: (1, 1) | $v_3$: (2, 1)  |
 
 
 ### 5. Batch Update
@@ -341,7 +345,8 @@ Suppose we want to insert or delete two edges randomly from the graph, we can ru
     sh BBatch.sh ../data/toy-graph/ 2 4 4
 
     sh EBatch.sh ../data/toy-graph/ 2 4 4
-
+    
+This process is random, so we don't list the result here.
 
 ### 6. Query
 
@@ -350,6 +355,8 @@ Suppose we want to insert or delete two edges randomly from the graph, we can ru
     sh QCBI.sh ../data/toy-graph/ 1 1
 
     sh QCBN.sh ../data/toy-graph/ 1 1
+
+The result is: $u_1$, $u_2$, $u_3$, $v_1$, $v_2$, $v_3$.
     
 
 6.2 Suppose we want to query the community which is a (1,1)-core and contains vertex $u_1$, we can run one of the two commands:
@@ -357,15 +364,17 @@ Suppose we want to insert or delete two edges randomly from the graph, we can ru
     sh QSBI.sh ../data/toy-graph/ 1 1 1 1
 
     sh QSBN.sh ../data/toy-graph/ 1 1 1 1
-    
 
-6.3 Suppose we want to query the $\alpha$-offsets with $\alpha=1$ for vertex $u_1$, we can run one of the two commands:
+The result is: $u_1$, $u_2$, $u_3$, $v_1$, $v_2$, $v_3$.
+
+
+6.3 Suppose we want to query the $\alpha$-offsets for vertex $u_1$, we can run one of the two commands:
 
     sh QOBI.sh ../data/toy-graph/ 1 1
 
     sh QOBN.sh ../data/toy-graph/ 1 1
 
-
+The result is: 2.
 
 
 

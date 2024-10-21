@@ -156,6 +156,8 @@ The commands for different algorithms are stored in the folder "command". So, ru
 
 3.2 Insert edges from an edge list file
 
+Generate the edge list file to be inserted randomly: ```python ../random_edges_generator.py graph_path edge_num insert_path```.
+
 | Parameter of Command Line |      Description       |                 Command                 |
 | :-----------------------: | :--------------------: | :-------------------------------------: |
 |          `RCIS`           |       Recompute        | ```sh RCIS.sh graph_path insert_path``` |
@@ -177,6 +179,8 @@ The commands for different algorithms are stored in the folder "command". So, ru
 
 
 4.2 Delete edges from an edge list file
+
+Generate the edge list file to be deleted randomly: ```python ../random_edges_generator.py graph_path edge_num delete_path```.
 
 | Parameter of Command Line |     Description       |                 Command                 |
 | :-----------------------: | :--------------------: | :-------------------------------------: |

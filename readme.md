@@ -43,9 +43,9 @@ We use eight large bipartite graphs, including seven real graphs (IMDB, WC, AR, 
     2) g++ bigraph.cpp gephi.cpp main.cpp random.cpp utility.cpp -O3 -o rand.o
     3) ./rand.o output_file_path 5000000 5000000 1000000000
 
-Our paper contains the detailed statistics and original sources of the above datasets.
+Our paper contains detailed statistics and original sources of the above datasets.
 
-**Dataset format:** 
+**Dataset Format:** 
 
 - `graph.meta` file containing the number of vertices on each side and the number of edges.
 - `graph.e` file containing all the edges.
@@ -67,7 +67,9 @@ graph.e:
 2 3
 3 1
 ```
-
+**Generation of Insertion and Deletion Edges:** 
+1) Generate the edge list file to be inserted randomly: ```python ../random_edges_generator.py graph_path edge_num insert_edgelist_path```.
+2) Generate the edge list file to be deleted randomly: ```python ../random_edges_generator.py graph_path edge_num delete_edgelist_path```.
 
 
 ## How to Run the Codes
@@ -156,8 +158,6 @@ The commands for different algorithms are stored in the folder "command". So, ru
 
 3.2 Insert edges from an edge list file
 
-Generate the edge list file to be inserted randomly: ```python ../random_edges_generator.py graph_path edge_num insert_path```.
-
 | Parameter of Command Line |      Description       |                 Command                 |
 | :-----------------------: | :--------------------: | :-------------------------------------: |
 |          `RCIS`           |       Recompute        | ```sh RCIS.sh graph_path insert_path``` |
@@ -179,8 +179,6 @@ Generate the edge list file to be inserted randomly: ```python ../random_edges_g
 
 
 4.2 Delete edges from an edge list file
-
-Generate the edge list file to be deleted randomly: ```python ../random_edges_generator.py graph_path edge_num delete_path```.
 
 | Parameter of Command Line |     Description       |                 Command                 |
 | :-----------------------: | :--------------------: | :-------------------------------------: |

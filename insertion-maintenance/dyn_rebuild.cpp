@@ -761,13 +761,10 @@ int find_kth(vector<int> B, int m, int k) {
 		vector<int> skyline_u, skyline_v;
 		findDominantPairs_u(g.left_index[u], skyline_u);
 		findDominantPairs_v(g.right_index[v], skyline_v);
-		// (0,0)也是一个skyline
-		if (skyline_u[0] != 1) skyline_u.insert(skyline_u.begin(), {1, g.left_index[u][1]});
-		if (skyline_v.back() != 1) skyline_v.insert(skyline_v.end(), {g.right_index[v][1], 1});
 
 		// 初始化
 		vector<vid_t>& nbr_u = g.neighbor_v1[u]; 
-        vector<vid_t>& nbr_v = g.neighbor_v2[v];
+       		vector<vid_t>& nbr_v = g.neighbor_v2[v];
 		int u_deg = g.degree_v1[u];
 		int v_deg = g.degree_v2[v];
 		// cout << "deg u: " << u_deg << " " << skyline_u.size() << endl;
@@ -796,6 +793,10 @@ int find_kth(vector<int> B, int m, int k) {
 
 		g.left_index[u].push_back(0);
 		g.right_index[v].push_back(0);
+
+		// (0,0)也是一个skyline
+		if (skyline_u[0] != 1) skyline_u.insert(skyline_u.begin(), {1, g.left_index[u][1]});
+		if (skyline_v.empty() || skyline_v.back() != 1) skyline_v.insert(skyline_v.end(), {g.right_index[v][1], 1});
 
 		unordered_set<std::pair<int, int>, pair_hash> have_update; // 记录防止重复更新
 		unordered_set<int> have_update_alpha;

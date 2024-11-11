@@ -68,17 +68,11 @@ graph.e:
 3 1
 ```
 **Generation of Insertion and Deletion Edges:** 
-1) Generate the edge list file to be inserted randomly:
+Generate the edge list file to be inserted/deleted randomly:
 
    ```bash
-   python ../random_edges_generator.py graph_path edge_num insert_edgelist_path
+   python ../random_edges_generator.py graph_path edge_num edgelist_path
    ```    
-
-2) Generate the edge list file to be deleted randomly:
-
-    ```bash
-    python ../random_edges_generator.py graph_path edge_num delete_edgelist_path
-    ```  
 
 
 ## How to Run the Codes
